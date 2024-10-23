@@ -1,8 +1,8 @@
 node("ci-node") {
 
     stage("checkout") {
-        checkout scmGit(branches: [[name: '*/develop']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mchekini-check-consulting/staff-manager-automated-testing']])}
-
+        checkout scm
+    }
 
     stage("E2E Tests") {
          sh "npm install"

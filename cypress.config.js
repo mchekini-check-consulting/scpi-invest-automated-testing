@@ -4,7 +4,17 @@ module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
     setupNodeEvents(on, config) {
+
       require('cypress-mochawesome-reporter/plugin')(on);
+
+      on("before:browser:launch", (browser, launchOptions) => {
+        console.log(launchOptions.args);
+        if (browser.name === "chrome") {
+          launchOptions.args.push("--incognito");
+        }
+        return launchOptions;
+      });
+
       on("task", {
         async connectDB(query){
           const client = new Client({

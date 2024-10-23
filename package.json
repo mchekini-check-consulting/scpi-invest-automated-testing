@@ -1,4 +1,8 @@
 {
+
+  "name": "scpi-invest-automated-tests",
+  "version": "1.0.0",
+  "description": "Ce projet a pour but d'automatiser les tests de l'application SCPI INVEST +",
   "scripts": {
     "test": "cypress run"
   },
