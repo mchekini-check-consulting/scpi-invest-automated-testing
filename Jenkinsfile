@@ -6,10 +6,8 @@ node("ci-node") {
 
     stage("E2E Tests") {
          sh "npm install"
-         sh "sudo apt-get update"
-         sh "sudo apt-get install xvfb -y"
         try{
-            sh 'npx cypress run'
+            sh 'npm run test'
         }catch (Exception e){
             print("Une erreur s'est produite lors du lancement des tests e2e")
         }
