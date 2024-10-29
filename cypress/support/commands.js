@@ -6,8 +6,8 @@ Cypress.Commands.add('getScpiInvestToken', () => {
         body: {
             grant_type: 'password',
             client_id: 'scpi-invest',
-            username: 'mchekini',
-            password: 'test',
+            username: 'szemmouk',
+            password: '1993',
         }
     }).then((response) => {
         const { access_token } = response.body;
