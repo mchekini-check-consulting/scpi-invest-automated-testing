@@ -1,5 +1,16 @@
 const { defineConfig } = require("cypress");
-
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      on("before:browser:launch", (browser, launchOptions) => {
+        if (browser.name === "chrome") {
+          launchOptions.args.push("--window-size=1920,1080"); // Définit la taille de la fenêtre
+        }
+        return launchOptions;
+      });
+    },
+  },
+});
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
