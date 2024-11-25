@@ -1,0 +1,20 @@
+{
+  "localizations": [
+    "Espagne",
+    "Irlande"
+  ],
+  "sectors": [
+    "Bureaux",
+    "Hôtels"
+
+  ],
+  "fees": true
+}
+{
+  "selectedScpis": [
+    "Comète",
+    "Transitions Europe",
+    "Coeur d'Avenir"
+  ],
+  "investValue": 1000000
+}
